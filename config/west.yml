@@ -6,8 +6,8 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
     - name: keeb-it
       url-base: https://github.com/keeb-it
-    - name: urob
-      url-base: https://github.com/urob
+    # - name: urob
+    #   url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -16,8 +16,8 @@ manifest:
     - name: zmk-keyboards
       remote: keeb-it
       revision: main
-    - name: zmk-helpers
-      remote: urob
-      revision: main
+    # - name: zmk-helpers
+    #   remote: urob
+    #   revision: main
   self:
     path: config
