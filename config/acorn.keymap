@@ -11,6 +11,16 @@
             key-positions = <0 1>;
             bindings = <&studio_unlock>;
         };
+
+        left-cmd {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <16 15>;
+        };
+
+        right-cmd {
+            bindings = <&kp RIGHT_GUI>;
+            key-positions = <19 20>;
+        };
     };
 
     behaviors {
