@@ -11,36 +11,6 @@
             key-positions = <0 1>;
             bindings = <&studio_unlock>;
         };
-
-        left-alt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <16 15>;
-        };
-
-        right-alt {
-            bindings = <&kp RIGHT_ALT>;
-            key-positions = <19 20>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <3 4>;
-        };
-
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <7 8>;
-        };
-
-        left-cmd {
-            bindings = <&kp LEFT_GUI>;
-            key-positions = <27 28>;
-        };
-
-        right-cmd {
-            bindings = <&kp RIGHT_GUI>;
-            key-positions = <31 32>;
-        };
     };
 
     behaviors {
