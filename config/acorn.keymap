@@ -11,6 +11,11 @@
             key-positions = <0 1>;
             bindings = <&studio_unlock>;
         };
+
+        ctrl+alt {
+            bindings = <&kp LA(LEFT_CONTROL)>;
+            key-positions = <19 21 20>;
+        };
     };
 
     behaviors {
