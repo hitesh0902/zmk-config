@@ -24,7 +24,7 @@
 
         backspace {
             bindings = <&kp BSPC>;
-            key-positions = <8 9 10>;
+            key-positions = <8 9 7>;
         };
     };
 
@@ -126,7 +126,25 @@
                                        &kp LGUI              &trans                &hma LEFT_ALT SPACE          &hma RIGHT_GUI RETURN  &trans         &kp LALT
             >;
         };
+
+        tri_layer {
+            bindings = <
+&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans                &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans        &trans        &trans                &trans  &trans  &trans
+            >;
+
+            label = "tri";
+        };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        tri {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 };
