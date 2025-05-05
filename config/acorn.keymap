@@ -12,9 +12,19 @@
             bindings = <&studio_unlock>;
         };
 
-        ctrl+alt {
-            bindings = <&kp LA(LEFT_CONTROL)>;
+        hyper-key {
+            bindings = <&kp LA(LG(LEFT_CONTROL))>;
             key-positions = <19 21 20>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <2 3 4>;
+        };
+
+        backspace {
+            bindings = <&kp BSPC>;
+            key-positions = <8 9 10>;
         };
     };
 
