@@ -70,6 +70,18 @@
             hold-trigger-on-release;
             require-prior-idle-ms = <150>;
         };
+
+        tp: tp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <0>;
+            quick-tap-ms = <200>;
+        };
     };
 
     keymap {
@@ -86,10 +98,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R  &kp T                &kp Y  &kp U                 &kp I  &kp O      &kp P    &kp BSPC
-&mt LCTRL ESCAPE  &kp A  &kp S  &kp D     &kp F  &kp G                       &kp H                 &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z  &kp X  &kp C     &kp V  &kp B                       &kp N                 &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                &kp LGUI  &mo 1  &hma LEFT_ALT SPACE         &hma RIGHT_GUI ENTER  &mo 2  &kp LALT
+&kp TAB           &kp Q  &kp W  &kp E     &kp R  &kp T               &kp Y  &kp U                &kp I  &kp O      &kp P    &kp BSPC
+&mt LCTRL ESCAPE  &kp A  &kp S  &kp D     &kp F  &kp G                      &kp H                &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT         &kp Z  &kp X  &kp C     &kp V  &kp B                      &kp N                &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                &kp LGUI  &mo 1  &tp LEFT_ALT SPACE         &tp RIGHT_GUI ENTER  &mo 2  &kp LALT
             >;
         };
 
@@ -103,10 +115,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB        &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT          &kp CARET  &kp AMPS               &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&mt LCTRL ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                          &kp MINUS              &kp EQUAL     &kp GRAVE             &kp LEFT_BRACKET       &kp RIGHT_BRACKET  &kp PIPE
-&kp LSHFT      &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0                          &kp UNDER              &kp PLUS      &kp TILDE             &kp LEFT_BRACE         &kp RIGHT_BRACE    &kp RIGHT_SHIFT
-                                           &kp LGUI      &trans        &hma LEFT_ALT SPACE             &hma RIGHT_GUI RETURN  &trans        &kp LALT
+&kp TAB        &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT         &kp CARET  &kp AMPS              &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&mt LCTRL ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                         &kp MINUS             &kp EQUAL     &kp GRAVE             &kp LEFT_BRACKET       &kp RIGHT_BRACKET  &kp PIPE
+&kp LSHFT      &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0                         &kp UNDER             &kp PLUS      &kp TILDE             &kp LEFT_BRACE         &kp RIGHT_BRACE    &kp RIGHT_SHIFT
+                                           &kp LGUI      &trans        &tp LEFT_ALT SPACE             &tp RIGHT_GUI RETURN  &trans        &kp LALT
             >;
         };
 
@@ -120,10 +132,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB        &kp F1      &kp F2      &kp F3                &kp F4                &kp F5               &kp F6  &kp F7                 &kp F8         &kp F9        &kp F10    &kp BSPC
-&mt LCTRL ESC  &kp F11     &kp F12     &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_PLAY_PAUSE             &kp LEFT               &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp BSLH  &kp GRAVE
-&kp LSHFT      &bt BT_PRV  &bt BT_NXT  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans                       &kp HOME               &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp PIPE  &kp RIGHT_SHIFT
-                                       &kp LGUI              &trans                &hma LEFT_ALT SPACE          &hma RIGHT_GUI RETURN  &trans         &kp LALT
+&kp TAB        &kp F1      &kp F2      &kp F3                &kp F4                &kp F5              &kp F6  &kp F7                &kp F8         &kp F9        &kp F10    &kp BSPC
+&mt LCTRL ESC  &kp F11     &kp F12     &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_PLAY_PAUSE            &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp BSLH  &kp GRAVE
+&kp LSHFT      &bt BT_PRV  &bt BT_NXT  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans                      &kp HOME              &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp PIPE  &kp RIGHT_SHIFT
+                                       &kp LGUI              &trans                &tp LEFT_ALT SPACE          &tp RIGHT_GUI RETURN  &trans         &kp LALT
             >;
         };
 
