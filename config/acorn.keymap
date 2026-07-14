@@ -3,6 +3,15 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/matrix_transform.h>
 
+/* Disable rotary encoders (acorn has no hardware encoders) */
+&left_encoder {
+	status = "disabled";
+};
+
+&right_encoder {
+	status = "disabled";
+};
+
 / {
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
