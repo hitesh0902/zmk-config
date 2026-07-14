@@ -1,0 +1,8 @@
+/* Disable rotary encoders for keyboards that don't have them */
+&left_encoder {
+	status = "disabled";
+};
+
+&right_encoder {
+	status = "disabled";
+};
