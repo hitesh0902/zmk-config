@@ -7,7 +7,11 @@
 #
 # board: [ "nice_nano_v2" ]
 # shield: [ "corne_left", "corne_right" ]
-# include:
+# Include specific board+shield combinations
+# Use the format: 
+# - board: <board_name>
+#   shield: <shield_name> 
+#   snippet: <optional_snippet>
 #   - board: bdn9_rev2
 #   - board: nice_nano_v2
 #     shield: reviung41
@@ -16,7 +20,11 @@
 #     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
 #     artifact-name: corne_left_with_logging
 #
-include:
+# Include specific board+shield combinations
+# Use the format: 
+# - board: <board_name>
+#   shield: <shield_name> [,
+#   snippet: <optional_snippet>]
   - board: nice_nano_v2
     shield: acorn_central_left
     snippet: studio-rpc-usb-uart
