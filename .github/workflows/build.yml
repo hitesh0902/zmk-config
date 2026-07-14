@@ -1,7 +1,6 @@
-on: [workflow_dispatch]
+name: Build ZMK firmware
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    # Reusable workflow used for building custom configurations.
-    # If this fails, ensure the input variables (board, shield) 
-    # match the schema expected by 'build-user-config.yml'.
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
