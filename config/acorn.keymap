@@ -165,8 +165,9 @@
         };
 
         tri_layer {
+            // LWR+RSE held together; &tog 4 (T position) toggles the gaming layer on.
             bindings = <
-&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans    &trans         &trans       &trans   &trans
+&trans  &trans        &trans        &trans        &trans        &tog 4        &trans  &trans    &trans         &trans       &trans   &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4          &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &trans  &trans
 &trans  &trans        &trans        &trans        &trans        &trans                &trans    &trans         &trans       &trans   &trans  &trans
                                     &trans        &trans        &trans                &trans    &trans         &trans
